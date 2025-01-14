@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capturistas - OAXACA</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-section">
+            <img src="assets/profile.jpg" alt="Profile" class="profile-image">
+            <h5 class="mb-1">Karthi Madesh</h5>
+            <p class="text-muted small">CAPTURISTA</p>
+        </div>
+        
+        <nav class="mt-4">
+            <a href="#" class="nav-link">
+                <i class="fas fa-home me-2"></i> INICIO
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-users me-2"></i> Migrantes
+            </a>
+            <a href="#" class="nav-link active">
+                <i class="fas fa-user-tie me-2"></i> Personal
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-chart-bar me-2"></i> Reporte
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-cog me-2"></i> Ajustes
+            </a>
+        </nav>
+
+        <div class="mt-auto" style="position: absolute; bottom: 20px; width: 85%;">
+            <a href="#" class="nav-link" id="logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4>CRUD OPERATIONS</h4>
+            <button class="btn btn-warning" id="addCapturista">
+                AGREGAR CAPTURISTA
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title mb-4">Capturistas</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>NOMBRE</th>
+                                <th>CORREO</th>
+                                <th>TELEFONO</th>
+                                <th>credential</th>
+                                <th>FECHA DE ALTA</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="capturistasTable">
+                            <!-- Table content will be dynamically populated -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div class="modal fade" id="capturistaModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Capturista</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="capturistaForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Credential</label>
+                            <input type="text" class="form-control" id="credential" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="saveCapturista">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>

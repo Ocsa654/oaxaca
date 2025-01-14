@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - OAXACA</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-section">
+            <img src="assets/profile.jpg" alt="Profile" class="profile-image">
+            <h5 class="mb-1">KEVIN ZARATE</h5>
+            <p class="text-muted small">ADMINISTRADOR</p>
+        </div>
+        
+        <nav class="mt-4">
+            <a href="#" class="nav-link active">
+                <i class="fas fa-home me-2"></i> Inicio
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-users me-2"></i> MIGRANTES
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-user-tie me-2"></i> PERSONAL
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-chart-bar me-2"></i> Reporte
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-cog me-2"></i> Ajustes
+            </a>
+        </nav>
+
+        <div class="mt-auto" style="position: absolute; bottom: 20px; width: 85%;">
+            <a href="#" class="nav-link" id="logout">
+                <i class="fas fa-sign-out-alt me-2"></i> Logout
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <img src="assets/oaxaca-logo.png" alt="Oaxaca" class="header-logo">
+            <div class="d-flex align-items-center">
+                <input type="text" class="form-control me-2" placeholder="Buscar...">
+                <button class="btn btn-primary">
+                    <i class="fas fa-user"></i> CAPTURISTA: 3
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="stats-card">
+                    <h6>ARCHIVOS</h6>
+                    <h2>243</h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stats-card">
+                    <h6>Deportados</h6>
+                    <h2>13</h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stats-card">
+                    <h6>REGISTROS</h6>
+                    <h2>556,000</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
